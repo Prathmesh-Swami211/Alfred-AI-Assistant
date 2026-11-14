@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prathmesh-swami211.github.io/Alfred-AI-Assistant/sitemap.xml

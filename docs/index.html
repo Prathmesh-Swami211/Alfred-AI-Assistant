@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Meet Alfred, an AI-powered desktop assistant built with Python. Explore its voice interface, AI conversations, and controlled desktop actions.">
+  <meta property="og:title" content="Alfred — Your AI Desktop Assistant">
+  <meta property="og:description" content="A personal desktop assistant built with Python, voice interaction, and carefully controlled computer actions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prathmesh-swami211.github.io/Alfred-AI-Assistant/">
+  <title>Alfred — Your AI Desktop Assistant</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23ff8a36'/%3E%3Cpath d='M32 11 49 49H39l-3-8H27l-3 8H15L32 11Zm0 15-3 8h6l-3-8Z' fill='%230b0d12'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Alfred home">
+      <span class="brand-mark">A</span><span>alfred<span class="brand-dot">.</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#technology">Technology</a>
+      <a class="nav-cta" href="https://github.com/Prathmesh-Swami211/Alfred-AI-Assistant" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> A PERSONAL DESKTOP ASSISTANT</div>
+        <h1>Your desktop.<br><span class="gradient-text">A little smarter.</span></h1>
+        <p class="hero-lede">Meet Alfred — an AI-powered desktop assistant built to bring voice interaction, helpful answers, and everyday computer actions into one place.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/Prathmesh-Swami211/Alfred-AI-Assistant" target="_blank" rel="noopener noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="#features">Discover Alfred</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✦</span> An independent project, built with curiosity.</div>
+      </div>
+      <div class="orb-stage" aria-label="Abstract orange Alfred assistant orb illustration">
+        <div class="orb-ring ring-one"></div>
+        <div class="orb-ring ring-two"></div>
+        <div class="orb-core"><div class="orb-shine"></div><div class="orb-letter">A</div></div>
+        <span class="orbit-tag tag-top">LISTENING</span>
+        <span class="orbit-tag tag-bottom">READY TO HELP</span>
+        <span class="spark spark-one">✦</span><span class="spark spark-two">·</span><span class="spark spark-three">✧</span>
+      </div>
+      <div class="hero-scroll">SCROLL TO EXPLORE <span></span></div>
+    </section>
+
+    <section class="intro section-wrap">
+      <p class="section-kicker">THE IDEA</p>
+      <h2>Less switching.<br><span class="muted">More getting things done.</span></h2>
+      <p class="section-description">Alfred is being developed as a practical assistant for your computer. Ask a question, use your voice, or request a supported desktop action — all through one interface.</p>
+    </section>
+
+    <section class="features section-wrap" id="features">
+      <div class="section-heading">
+        <div><p class="section-kicker">WHAT ALFRED CAN DO</p><h2>Useful by design<span class="orange">.</span></h2></div>
+        <p>Designed around simple interactions that make a desktop workflow feel more natural.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card feature-large">
+          <div class="feature-icon">✳</div><span class="card-index">01 / CONVERSATION</span>
+          <h3>AI-powered answers</h3>
+          <p>Talk with Alfred and get help with questions through supported AI providers.</p>
+          <div class="mini-chat"><span class="mini-avatar">A</span><span>How can I help you today?</span><i></i></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">◖))</div><span class="card-index">02 / VOICE</span>
+          <h3>Speak naturally</h3>
+          <p>Use microphone input and spoken responses for a hands-free interaction style.</p>
+          <div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⌘</div><span class="card-index">03 / DESKTOP</span>
+          <h3>Helpful computer actions</h3>
+          <p>Open supported applications, websites, and folders using predefined actions.</p>
+          <div class="app-chips"><span>Apps</span><span>Websites</span><span>Folders</span></div>
+        </article>
+        <article class="feature-card feature-wide">
+          <div class="feature-icon">⌕</div><span class="card-index">04 / WORKFLOW</span>
+          <h3>A focused interface</h3>
+          <p>A dedicated interface brings chat and assistant controls together, with a local Python server connecting the pieces.</p>
+          <div class="workflow-line"><span>YOU</span><b>→</b><span>ALFRED</span><b>→</b><span>YOUR PC</span></div>
+        </article>
+      </div>
+      <p class="fine-print">Features are under active development. Availability depends on the current project version and local configuration.</p>
+    </section>
+
+    <section class="how section-wrap" id="how-it-works">
+      <div class="section-heading">
+        <div><p class="section-kicker">UNDER THE HOOD</p><h2>How it comes together<span class="orange">.</span></h2></div>
+        <p>A modular Python project connects the interface, AI services, voice input, and a controlled set of desktop actions.</p>
+      </div>
+      <div class="pipeline">
+        <div class="pipeline-step"><span class="step-number">01</span><div class="step-symbol">◉</div><h3>Your input</h3><p>Type a message or speak through your microphone.</p></div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step"><span class="step-number">02</span><div class="step-symbol">✧</div><h3>Alfred</h3><p>The Python application processes the request.</p></div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step"><span class="step-number">03</span><div class="step-symbol">⌘</div><h3>Helpful response</h3><p>Get an answer or trigger a supported action.</p></div>
+      </div>
+    </section>
+
+    <section class="technology section-wrap" id="technology">
+      <div class="tech-panel">
+        <div class="tech-copy"><p class="section-kicker">BUILT WITH</p><h2>Curiosity meets code<span class="orange">.</span></h2><p>Alfred brings together familiar tools from the Python and web ecosystems. The project is open source, so you can explore how it works and follow its progress.</p><a class="text-link" href="https://github.com/Prathmesh-Swami211/Alfred-AI-Assistant" target="_blank" rel="noopener noreferrer">Explore the source code <span>↗</span></a></div>
+        <div class="tech-stack"><span>PYTHON</span><span>FLASK</span><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>GEMINI API</span><span>GROQ API</span><span>SPEECH RECOGNITION</span></div>
+      </div>
+    </section>
+
+    <section class="safety section-wrap">
+      <div class="safety-symbol">⌑</div>
+      <div><p class="section-kicker">BUILT WITH CARE</p><h2>Useful tools. Thoughtful controls.</h2><p>Desktop actions should be predictable. Alfred is designed around predefined actions rather than unrestricted command execution. Keep API keys private, review permissions, and confirm important changes before they happen.</p></div>
+    </section>
+
+    <section class="closing section-wrap">
+      <p class="section-kicker">FOLLOW THE BUILD</p>
+      <h2>Alfred is just<br><span class="gradient-text">getting started.</span></h2>
+      <p>Explore the code, follow development, and see what comes next.</p>
+      <a class="button button-primary" href="https://github.com/Prathmesh-Swami211/Alfred-AI-Assistant" target="_blank" rel="noopener noreferrer">Visit Alfred on GitHub <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home"><span class="brand-mark">A</span><span>alfred<span class="brand-dot">.</span></span></a>
+    <p>Built with curiosity by <strong>Prathmesh Swami</strong>.</p>
+    <a href="https://github.com/Prathmesh-Swami211/Alfred-AI-Assistant" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <span class="copyright">© <span id="year"></span> Alfred Project</span>
+  </footer>
+</body>
+</html>
