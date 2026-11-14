@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ALFRED AI</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ================================================== -->
+    <!-- TOP BAR -->
+    <!-- ================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+            <span class="brand-main">ALFRED</span>
+            <span class="brand-sub">
+                PERSONAL AI SYSTEM
+            </span>
+        </div>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            <span>
+                SYSTEM ONLINE
+            </span>
+
+        </div>
+
+
+        <div
+            id="clock"
+            class="clock"
+        >
+            00:00:00
+        </div>
+
+    </header>
+
+
+    <!-- ================================================== -->
+    <!-- MAIN DASHBOARD -->
+    <!-- ================================================== -->
+
+    <main class="dashboard">
+
+
+        <!-- ============================================== -->
+        <!-- LEFT : SYSTEM DIAGNOSTICS -->
+        <!-- ============================================== -->
+
+        <section class="panel diagnostics-panel">
+
+            <div class="panel-header">
+
+                <span>
+                    SYSTEM DIAGNOSTICS
+                </span>
+
+                <span class="panel-indicator">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <!-- CPU -->
+
+            <div class="metric">
+
+                <div class="metric-header">
+
+                    <span>CPU LOAD</span>
+
+                    <span id="cpuValue">
+                        --%
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        id="cpuBar"
+                        class="progress-fill"
+                        style="width: 0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RAM -->
+
+            <div class="metric">
+
+                <div class="metric-header">
+
+                    <span>MEMORY</span>
+
+                    <span id="ramValue">
+                        --%
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        id="ramBar"
+                        class="progress-fill"
+                        style="width: 0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISK -->
+
+            <div class="metric">
+
+                <div class="metric-header">
+
+                    <span>DISK</span>
+
+                    <span id="diskValue">
+                        --%
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        id="diskBar"
+                        class="progress-fill orange"
+                        style="width: 0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEMPERATURE -->
+
+            <div class="data-row">
+
+                <span>CPU TEMP</span>
+
+                <strong id="tempValue">
+                    --°C
+                </strong>
+
+            </div>
+
+
+            <!-- NETWORK -->
+
+            <div class="section-label">
+                NETWORK
+            </div>
+
+
+            <div class="data-row">
+
+                <span>DOWNLOAD</span>
+
+                <strong id="downloadValue">
+                    -- Mbps
+                </strong>
+
+            </div>
+
+
+            <div class="data-row">
+
+                <span>UPLOAD</span>
+
+                <strong id="uploadValue">
+                    -- Mbps
+                </strong>
+
+            </div>
+
+
+            <!-- BATTERY -->
+
+            <div class="section-label">
+                POWER
+            </div>
+
+
+            <div class="data-row">
+
+                <span>BATTERY</span>
+
+                <strong id="batteryValue">
+                    --
+                </strong>
+
+            </div>
+
+
+            <!-- UPTIME -->
+
+            <div class="data-row">
+
+                <span>UPTIME</span>
+
+                <strong id="uptimeValue">
+                    --
+                </strong>
+
+            </div>
+
+
+            <!-- HOSTNAME -->
+
+            <div class="section-label">
+                SYSTEM
+            </div>
+
+
+            <div class="data-row">
+
+                <span>HOST</span>
+
+                <strong id="hostname">
+                    --
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================================== -->
+        <!-- CENTER : ALFRED CORE -->
+        <!-- ============================================== -->
+
+        <section class="panel core-panel">
+
+            <div class="panel-header">
+
+                <span>
+                    ALFRED CORE
+                </span>
+
+                <span class="panel-indicator">
+                    ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="core-container">
+
+
+                <!-- OUTER RING -->
+
+                <div class="core-ring ring-one"></div>
+
+                <div class="core-ring ring-two"></div>
+
+                <div class="core-ring ring-three"></div>
+
+
+                <!-- ORBIT -->
+
+                <div class="orbit orbit-one"></div>
+
+                <div class="orbit orbit-two"></div>
+
+
+                <!-- CORE -->
+
+                <div class="core">
+
+                    <div class="core-glow"></div>
+
+                    <span class="core-letter">
+                        A
+                    </span>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div
+                    id="coreStatus"
+                    class="core-status"
+                >
+                    SYSTEM ONLINE
+                </div>
+
+
+                <!-- VOICE BUTTON -->
+
+                <button
+                    id="micButton"
+                    class="voice-button"
+                    type="button"
+                >
+
+                    <span class="voice-icon">
+                        ◉
+                    </span>
+
+                    <span>
+                        ACTIVATE VOICE
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================================== -->
+        <!-- RIGHT : INTELLIGENCE -->
+        <!-- ============================================== -->
+
+        <section class="panel intelligence-panel">
+
+            <div class="panel-header">
+
+                <span>
+                    GLOBAL INTELLIGENCE
+                </span>
+
+                <span class="panel-indicator">
+                    ONLINE
+                </span>
+
+            </div>
+
+
+            <div class="intel-grid">
+
+
+                <div class="intel-card">
+
+                    <span class="intel-label">
+                        AI ENGINE
+                    </span>
+
+                    <strong>
+                        GEMINI
+                    </strong>
+
+                </div>
+
+
+                <div class="intel-card">
+
+                    <span class="intel-label">
+                        FALLBACK
+                    </span>
+
+                    <strong>
+                        GROQ
+                    </strong>
+
+                </div>
+
+
+                <div class="intel-card">
+
+                    <span class="intel-label">
+                        VOICE
+                    </span>
+
+                    <strong>
+                        READY
+                    </strong>
+
+                </div>
+
+
+                <div class="intel-card">
+
+                    <span class="intel-label">
+                        TELEMETRY
+                    </span>
+
+                    <strong>
+                        LIVE
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="intel-status">
+
+                <div class="status-line">
+
+                    <span class="status-dot"></span>
+
+                    NEURAL PROTOCOLS
+                    <strong>ACTIVE</strong>
+
+                </div>
+
+
+                <div class="status-line">
+
+                    <span class="status-dot"></span>
+
+                    VOICE INTERFACE
+                    <strong>READY</strong>
+
+                </div>
+
+
+                <div class="status-line">
+
+                    <span class="status-dot"></span>
+
+                    LOCAL SYSTEM
+                    <strong>CONNECTED</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================================== -->
+        <!-- BOTTOM : REAL-TIME TERMINAL -->
+        <!-- ============================================== -->
+
+        <section class="panel terminal-panel">
+
+
+            <!-- ========================================== -->
+            <!-- LEFT HALF : SYSTEM TERMINAL -->
+            <!-- ========================================== -->
+
+            <div class="terminal-half system-terminal">
+
+                <div class="panel-header">
+
+                    <span>
+                        REAL-TIME SYSTEM TERMINAL
+                    </span>
+
+                    <span class="panel-indicator">
+                        LIVE
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="systemTerminal"
+                    class="terminal-output"
+                >
+
+                    <div class="terminal-line">
+                        <span class="terminal-prefix">
+                            &gt;
+                        </span>
+
+                        ALFRED system initialized
+                    </div>
+
+
+                    <div class="terminal-line">
+                        <span class="terminal-prefix">
+                            &gt;
+                        </span>
+
+                        PC telemetry connected
+                    </div>
+
+
+                    <div class="terminal-line">
+                        <span class="terminal-prefix">
+                            &gt;
+                        </span>
+
+                        Neural protocols active
+                    </div>
+
+
+                    <div class="terminal-line">
+                        <span class="terminal-prefix">
+                            &gt;
+                        </span>
+
+                        Voice interface ready
+                    </div>
+
+                </div>
+
+
+                <div class="command-line">
+
+                    <span>&gt;</span>
+
+                    <span class="cursor"></span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ========================================== -->
+            <!-- RIGHT HALF : COMMUNICATION -->
+            <!-- ========================================== -->
+
+            <div class="terminal-half communication-terminal">
+
+                <div class="panel-header">
+
+                    <span>
+                        ALFRED COMMUNICATION
+                    </span>
+
+                    <span class="panel-indicator">
+                        READY
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="communicationLog"
+                    class="communication-log"
+                >
+
+                    <div class="communication-message system">
+
+                        <div class="communication-sender">
+                            SYSTEM
+                        </div>
+
+                        <div class="communication-text">
+                            Alfred command interface ready.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="communication-input">
+
+                    <input
+                        id="messageInput"
+                        type="text"
+                        placeholder="COMMUNICATE WITH ALFRED..."
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        id="sendButton"
+                        type="button"
+                    >
+                        SEND
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================================== -->
+    <!-- FOOTER -->
+    <!-- ================================================== -->
+
+    <footer class="footer">
+
+        <span>
+            ALFRED AI SYSTEM
+        </span>
+
+        <span>
+            USER: PRATHMESH
+        </span>
+
+        <span>
+            LOCAL INSTANCE
+        </span>
+
+    </footer>
+
+
+    <!-- ================================================== -->
+    <!-- SCRIPT -->
+    <!-- ================================================== -->
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>

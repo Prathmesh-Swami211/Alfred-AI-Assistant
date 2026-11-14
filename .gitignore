@@ -1,0 +1,51 @@
+
+# API keys and secrets
+.env
+.env.*
+!.env.example
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*$py.class
+
+# Cache files and folders
+.cache/
+cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.cache
+
+# Build files
+build/
+dist/
+*.spec
+
+# Startup and executable files
+*.bat
+*.exe
+*.ico
+
+# Logs
+*.log
+logs/
+
+# Editor settings
+.vscode/
+.idea/
+
+# Windows temporary files
+Thumbs.db
+desktop.ini
+
+# OS and system files
+.DS_Store
+.Spotlight-V100
+.Trashes
